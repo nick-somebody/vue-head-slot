@@ -11,11 +11,24 @@ app.use(VueHeadSlot)
 And anywhere in your app.
 ```html
 <head-slot>
-    <title>Hello</title>
-    <meta name="Description" CONTENT="Describe'n dis page">
     <meta name="robots" content="nofollow">
 </head-slot>
 ```
+
+Just be sure to remove content from `index.html` that you intend to manage like this. This appends content, so it will duplicate tags that are already declared.
+
+## Other examples
+
+Using with `vue-router`.
+```html
+<!-- Some page in your route scheme -->
+<head-slot>
+    <title>{{ $route.name }}</title>
+    <link rel="canonical" :href="dynamicallyBuiltUrl" />
+    <link v-for="lang in langs" :key="lang" rel="alternate" :hreflang="lang" :href="`${dynamicallyBuiltUrl}/${lang}`" />
+</head-slot>
+```
+
 ## Disclaimer
 Vue3's Teleport makes this so easy that you probably don't need this module.
 
