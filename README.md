@@ -15,6 +15,8 @@ npm i -S vue-head-slot
 ## Usage
 
 ```js
+import VueHeadSlot from 'vue-head-slot'
+...
 app.use(VueHeadSlot)
 ```
 
