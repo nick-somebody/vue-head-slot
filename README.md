@@ -2,6 +2,16 @@
 
 How to manage content for your `head` easily.
 
+## Installation
+Installing
+```sh
+yarn add vue-head-slot
+```
+or
+```sh
+npm i -S vue-head-slot
+```
+
 ## Usage
 
 ```js
