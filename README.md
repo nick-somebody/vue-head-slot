@@ -1,6 +1,6 @@
 # vue-head-slot
 
-How to manage content for your `head` easily.
+Manage content for your `head` element easily. Internally uses Vue3's `<teleport>`.
 
 ## Installation
 Installing
@@ -25,6 +25,16 @@ And anywhere in your app.
 <head-slot>
     <meta name="robots" content="nofollow">
 </head-slot>
+```
+
+Results in...
+```html
+<html>
+<head>
+    ...
+    <meta name="robots" content="nofollow">
+</head>
+...
 ```
 
 Just be sure to remove content from `index.html` that you intend to manage like this. This appends content, so it will duplicate tags that are already declared.
@@ -66,6 +76,10 @@ export default {
   }
 }
 ```
+
+## Trivia
+
+This was almost called `vue-head-shot`. I expect credit if someone creates a fork with that name.
 
 ## License
 Copyright 2020 nick-somebody
