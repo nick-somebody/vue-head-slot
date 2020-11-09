@@ -1,7 +1,11 @@
 {
   "name": "vue-head-slot",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "main": "dist/vue-head-slot.common.js",
+  "author": "nick_somebody",
+  "description": "A VueJS lib that teleports a slot to the head of the document. It's pretty dumb, you probably don't need this.",
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target=lib"
@@ -13,6 +17,11 @@
     "@vue/cli-service": "~4.5.0",
     "@vue/compiler-sfc": "^3.0.0"
   },
+  "files": [
+    "dist/*",
+    "src/*",
+    "*.json"
+  ],
   "browserslist": [
     "> 1%",
     "last 2 versions",
